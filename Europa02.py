@@ -67,7 +67,6 @@ def selecao_personagem():
     while (jogador == 1):
 
         if  jogador == 1:
-            quebra_linha()
             print("Estamos a caminho da 'Europa' e uma nave de guerra inimiga se aproxima!!!\n")
             quebra_linha()
         
@@ -123,7 +122,6 @@ def selecao_personagem():
     while (jogador == 2):
 
         if jogador == 2:
-            quebra_linha()
             print("Estamos a caminho da ""Europa"" e uma nave inimiga se aproxima!!!\n")
             quebra_linha()
             fase_01 = int(input("[ 1 ] Você se teletransporta para a nave inimiga com uma equipe e os surpreende.\n[ 2 ] Você vai sozinho. Sempre foi muito corajoso!\n"))
@@ -136,7 +134,6 @@ def selecao_personagem():
         else:
             quebra_linha()
             print("Aí não!! DEU RUIM!!!")
-            quebra_linha()
             selecao_personagem()
             # return opcao_errada
 
@@ -164,7 +161,6 @@ def selecao_personagem():
     while (jogador == 3):
 
         if jogador == 3:
-            quebra_linha()
             print("Estamos a caminho da ""Europa"" e uma nave inimiga se aproxima!!!\n")
             fase_01 = int(input("[ 1 ] Você lança um ataque com misseis nucleares.\n[ 2 ] Você ativa campo de camuflagem e espera eles sairem do alcance.\n"))
 

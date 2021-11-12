@@ -1,4 +1,6 @@
-#import (GAME-EUROPA.txt)
+with open("introducao_europa.txt", "r", encoding = "utf-8") as arquivo:
+           introducao_europa = arquivo.readlines()
+           
 def quebra_linha():
     print('-=' * 42)
 
@@ -10,12 +12,8 @@ def nova_tentativa():
     else:
         print("Que pena!!!")
         exit()
-        
-
     
-#madre = 1
-#marfao = 2
-#suca = 3
+        
 quebra_linha()
 print("Escolha um jogador.\n")
 

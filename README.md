@@ -1,4 +1,3 @@
 # projeto_final_mod01
  modulo01_Resilia
- aprendendo sobre git
- Alterando direto no site
+ Finalizando introdução do jogo "Europa".

@@ -13,22 +13,21 @@ def nova_tentativa():
     else:
         print("Fica para uma próxima então!!!")
         exit()
-    
-        
-quebra_linha()
-print("Agora é com você...\n")
-print("O tempo não está ajudando...\n")
-print("Nosso planeta está condenado...\n")
-print("Estamos em uma viagem pelo universo...\n")
-print("Antes vc tem uma missão...\n")
-print("Escolha um jogador:\n")
 
 
 def selecao_personagem():
     quebra_linha()
+    print(("==-" * 12) + "MISSÃO EUROPA" + ("-==" * 12))
+    quebra_linha()
+    print("Agora é com você...\n")
+    print("O tempo não está ajudando...\n")
+    print("Estamos em uma viagem pelo universo...\n")
+    print("Antes vc tem uma missão...\n")
+    print("Escolha um jogador:\n")
+    quebra_linha()
     jogador = int(input("[ 1 ] MADRE  [ 2 ] MARFÃO  [ 3 ] SUCA \n"))
     
-    print("==-==-==-==-==-==-==-==-==-==-==-=- MISSÃO EUROPA -=-==-==-==-==-==-==-==-==-==-==-==\n")
+    
     
     if jogador == 1:
         print("Madre , 34 anos, natural de Uberlandia/MG, pscicóloga militar(NASA) com poderes de telecinese.\n")
@@ -44,7 +43,7 @@ def selecao_personagem():
         quebra_linha()
         #escolha_sim_ou_nao()
     else:
-        print("***Escolha inválida***\nEscolha [ 1 ] [ 2 ] ou [ 3 ]")
+        print("*** Escolha inválida ***\nEscolha [ 1 ] [ 2 ] ou [ 3 ]")
         selecao_personagem()
         #retornar ao inicio do jogo.
     
@@ -62,10 +61,8 @@ def selecao_personagem():
         print("valor innválido!")
         selecao_personagem()
         
-        
-        
+       
             
-    
     
 
     while (jogador == 1):
@@ -104,7 +101,6 @@ def selecao_personagem():
             fase_03 = int(input("[ 1 ] Você arranca a porta com toda fúria e resgata nossos amigos.\n[ 2 ] Você aperta a campainha e espera.\n"))
         
         else:
-            quebra_linha()
             print("Tá de brincadeira, vidas em jogo e faz isso?!")
             quebra_linha()
             selecao_personagem()

@@ -3,19 +3,19 @@ with open("introducaoEuropa.txt", "r", encoding = "utf-8") as arquivo:
     
     print("{:>60}".format(introducaoEuropa))
 
-           #abrir arquivo de introdução "Europa", conta a história.           
+           #abrir arquivo de introdução "Europa", conta a história.   
+                              
 def quebra_linha():
     print('-=' * 42)
 
 def nova_tentativa():    
-    print("vamos jogar novamente?")   
+    print("Voltar ao jogo?")   
     nova_tentativa = int(input("[ 1 ] Sim [ 2 ] Não\n"))
     if  nova_tentativa == 1:
         selecao_personagem()
     else:
         print("Fica para uma próxima então!!!")
         exit()
-
 
 def selecao_personagem():
     quebra_linha()
@@ -58,14 +58,12 @@ def selecao_personagem():
         
     elif confirma_escolha == 2:
         quebra_linha()
-        print("Escolha outro jogador.")
-        selecao_personagem()
+        nova_tentativa()
     else:
         print("valor innválido!")
-        selecao_personagem()
+        nova_tentativa()
         
-       
-            
+                   
     
 
     while (jogador == 1):
@@ -78,14 +76,12 @@ def selecao_personagem():
             fase_01 = int(input("[ 1 ] Você ataca a nave enviando asteroides com seu poder de telecinese.\n[ 2 ] Você se esconde no banheiro.\n"))
 
         else:
-            quebra_linha()
             print("Você perdeu!")
             quebra_linha()
-            selecao_personagem()
+            nova_tentativa()
             # inicio do jogo
 
         if fase_01 == 1:
-            quebra_linha()
             print("Você passou!!!\n")
             print("Chegamos sãos e salvos a europa graças ao ataque bem sucedido \nmas os alienigenas ja sabem de nossa presença.\n")
             quebra_linha()
@@ -93,11 +89,10 @@ def selecao_personagem():
             
         else:
             print("Fugir  ou se esconder nunca foi uma escolha!!!")
-            selecao_personagem()
-            # return opcao_errada
+            nova_tentativa()
+            # volta ao inicio do jogo
 
         if fase_02 == 1:
-            quebra_linha()
             print("Você é incrível, mas ainda não acabou!")
             print("Tivemos algumas baixas, acontece!! Missao está difícil mas estamos de fora da base. Precisamos entrar.\n")
             quebra_linha()
@@ -106,8 +101,8 @@ def selecao_personagem():
         else:
             print("Tá de brincadeira, vidas em jogo e faz isso?!")
             quebra_linha()
-            selecao_personagem()
-            # return opcao_errada
+            nova_tentativa()
+            # volta ao inicio do jogo
 
         if fase_03 == 1:
             quebra_linha()
@@ -115,13 +110,15 @@ def selecao_personagem():
             quebra_linha()
             nova_tentativa()
            
+            # volta ao inicio do jogo
         else:
             quebra_linha()
             print("vc perdeu!!!")
             quebra_linha()
-            selecao_personagem()
+            nova_tentativa()
             
-
+            # volta ao inicio do jogo
+            
     while (jogador == 2):
 
         if jogador == 2:
@@ -137,9 +134,9 @@ def selecao_personagem():
         else:
             quebra_linha()
             print("Aí não!! DEU RUIM!!!")
-            selecao_personagem()
-            # return opcao_errada
+            nova_tentativa()
 
+            # voce reinicia o jogo
         if fase_02 == 2:
             quebra_linha()
             print("Você é incrível, mas ainda não acabou!")
@@ -148,9 +145,8 @@ def selecao_personagem():
         else:
             quebra_linha()
             print("Aí não!! Eles são impiedosos com traidores!!!")
-            selecao_personagem()
-            # return opcao_errada
-
+            nova_tentativa()
+            #voce reinicia ou para o jogo
         if fase_03 == 1:
             quebra_linha()
             print("SUCESSO na missão, voltamos para 'Esquadra Estelar',\nPizza pra todo mundo!!\nA história não acaba aqui e nem agora...")
@@ -158,46 +154,41 @@ def selecao_personagem():
         else:
             quebra_linha()
             print("Péssima escolha!! Perdeu tempo e foi encontrado!!!\nMissão foi um fracasso3")
-            selecao_personagem()
-            # return opcao_errada
+            nova_tentativa()
+
+             #voce reinicia ou para o jogo
 
     while (jogador == 3):
 
         if jogador == 3:
             print("Estamos a caminho da ""Europa"" e uma nave inimiga se aproxima!!!\n")
             fase_01 = int(input("[ 1 ] Você lança um ataque com misseis nucleares.\n[ 2 ] Você ativa campo de camuflagem e espera eles sairem do alcance.\n"))
-
         if fase_01 == 1:
             quebra_linha()
             print("Parabéns, começamos bem!!!")
             print("Chegamos sãos e salvos a europa graças ao ataque bem sucedido \nmas os alienigenas ja sabem de nossa presença.\n")
             fase_02 = int(input("[ 1 ] Você sai da nave com a equipe e entra em combate direto para chegar a base!!!\n[ 2 ] Você usa sua arma de choque da nave para atordoa-los.\n"))
         else:
-            quebra_linha()
             print("Isso atrasou a missão, eles estão em patrulha e não vão se distanciar tão cedo!!!")
-            selecao_personagem()
-
-
+            nova_tentativa()
         if fase_02 == 2:
             quebra_linha()
             print("Você é incrível, mas ainda não acabou!!!")
             print("Tivemos algumas baixas, acontece!!\nMissão está difícil mas estamos de fora da base. Precisamos entrar.\n")
             fase_03 = int(input("[ 1 ] Você usa seu laser em potência reduzida e abre a porta lateral.\n[ 2 ] Você explode a entrada principal com uma granada de nitrogênio.\n"))
         else:
-            quebra_linha()
             print("Poxa, no mano a mano nãããããoooo!!! São mais fortes soldado(a)!!!")
-            selecao_personagem()
+            nova_tentativa()
             # volta inicio do jogo
-
         if fase_03 == 1:
             quebra_linha()
             print("SUCESSO na missão, voltamos para 'Esquadra Estelar',\nPizza pra todo mundo!!\nA história não acaba aqui e nem agora...")
             nova_tentativa()
             #decide se joga novamente apos vencer.
         else:
-            quebra_linha()
             print("Melhor sorte da próxima vez!!!")
-            selecao_personagem()
+            nova_tentativa()
+
             # Volta ao inicio do jogo
 
 selecao_personagem()

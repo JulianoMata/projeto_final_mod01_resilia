@@ -1,4 +1,4 @@
-with open("introducaoEuropa.pdf", "r", encoding = "utf-8") as arquivo:
+with open("introducaoEuropa.txt", "r", encoding = "utf-8") as arquivo:
     introducaoEuropa = arquivo.read()
     
     print("{:>60}".format(introducaoEuropa))

@@ -1,4 +1,3 @@
-
 with open("introducaoEuropa.txt", "r", encoding = "utf-8") as arquivo:
            introducaoEuropa = arquivo.read()
 
@@ -17,8 +16,12 @@ def nova_tentativa():
     
         
 quebra_linha()
-
-print("Escolha um jogador.\n")
+print("Agora é com você...\n")
+print("O tempo não está ajudando...\n")
+print("Nosso planeta está condenado...\n")
+print("Estamos em uma viagem pelo universo...\n")
+print("Antes vc tem uma missão...\n")
+print("Escolha um jogador:\n")
 
 
 def selecao_personagem():

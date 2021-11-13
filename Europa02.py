@@ -1,5 +1,7 @@
-with open("introducaoEuropa.txt", "r", encoding = "utf-8") as arquivo:
-           introducaoEuropa = arquivo.read()
+with open("introducaoEuropa.pdf", "r", encoding = "utf-8") as arquivo:
+    introducaoEuropa = arquivo.read()
+    
+    print("{:>60}".format(introducaoEuropa))
 
            #abrir arquivo de introdução "Europa", conta a história.           
 def quebra_linha():
@@ -18,6 +20,7 @@ def nova_tentativa():
 def selecao_personagem():
     quebra_linha()
     print(("==-" * 12) + "MISSÃO EUROPA" + ("-==" * 12))
+    
     quebra_linha()
     print("Agora é com você...\n")
     print("O tempo não está ajudando...\n")

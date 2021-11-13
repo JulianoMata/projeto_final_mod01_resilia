@@ -1,3 +1,4 @@
+
 with open("introducaoEuropa.txt", "r", encoding = "utf-8") as arquivo:
            introducaoEuropa = arquivo.read()
 
@@ -11,7 +12,7 @@ def nova_tentativa():
     if  nova_tentativa == 1:
         selecao_personagem()
     else:
-        print("Que pena!!!")
+        print("Fica para uma próxima então!!!")
         exit()
     
         

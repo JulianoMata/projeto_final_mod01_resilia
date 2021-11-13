@@ -1,6 +1,7 @@
-with open("introducao_europa.txt", "r", encoding = "utf-8") as arquivo:
-           introducao_europa = arquivo.readlines()
-           
+with open("introducaoEuropa.txt", "r", encoding = "utf-8") as arquivo:
+           introducaoEuropa = arquivo.read()
+
+           #abrir arquivo de introdução "Europa", conta a história.           
 def quebra_linha():
     print('-=' * 42)
 
@@ -15,6 +16,7 @@ def nova_tentativa():
     
         
 quebra_linha()
+
 print("Escolha um jogador.\n")
 
 

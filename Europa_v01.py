@@ -11,6 +11,13 @@ def general_ougar():
     
         print(ougar)
         #mostra imagem alienígena(General Ougar) quando perde.
+        
+def msg_vitoria():  
+    with open("vencedor.txt", "r", encoding = "utf-8") as arquivo:
+        vencedor = arquivo.read()
+    
+        print(vencedor)
+        #mensagem de vitoria
                               
 def quebra_linha():
     print('-=' * 42)
@@ -43,19 +50,25 @@ def selecao_personagem():
     
     if jogador == 1:
         with open("madre.txt", "r", encoding = "utf-8") as arquivo:
-            madre = arquivo.read()
-            print(madre)
-        
-        quebra_linha()
-        print("Madre , 34 anos, natural de Uberlandia/MG, pscicóloga militar(NASA) com poderes\nde telecinese.\n")
-        quebra_linha()
+            madre = arquivo.read() #le arquivo txt com imagem ascii 
+            print(madre) #mostra imagem
+            quebra_linha()
+            print("Madre , 34 anos, natural de Uberlandia/MG, pscicóloga militar(NASA) com poderes\nde telecinese.\n")
+            quebra_linha()
         #definição jogador 01
     elif jogador == 2:
+        with open("marfao.txt", "r", encoding = "utf-8") as arquivo:
+            marfao = arquivo.read()
+            print(marfao)
         quebra_linha()
         print("Marfão, alienígena(idade não definida), Zotax(refugiado), biólogo/geneticista com\npoderes de teletransporte.\n")
         quebra_linha()
         #definição jogador 02
     elif jogador == 3:
+        with open("suca.txt", "r", encoding = "utf-8") as arquivo:
+            suca = arquivo.read()
+            print(suca)
+        quebra_linha()
         print("Suca, 45 anos, natural de Berlim/Alemanha, piloto/navegador experiência em combate,\nhabilidade com armas.\n")
         quebra_linha()
         #definição jogador 03
@@ -64,8 +77,7 @@ def selecao_personagem():
         selecao_personagem()
         #retornar ao inicio do jogo.
     
-    print("Confirma escolha ou trocar? ")
-    quebra_linha()   
+    print("Confirma escolha ou trocar? ")  
     confirma_escolha = int(input("[ 1 ] Confirma [ 2 ] Troca\n"))
     if  confirma_escolha == 1:
         quebra_linha()
@@ -123,11 +135,11 @@ def selecao_personagem():
 
         if fase_03 == 1:
             quebra_linha()
+            msg_vitoria()
             print("SUCESSO na missão, voltamos para 'Esquadra Estelar',\nPizza pra todo mundo!!\nA história não acaba aqui e nem agora...")
             quebra_linha()
             nova_tentativa()
-           
-             # volta ao inicio do jogo
+            # volta ao inicio do jogo
         else:
             quebra_linha()
             print("Mas é vacilão mesmo!!!")
@@ -156,7 +168,6 @@ def selecao_personagem():
             general_ougar()
             nova_tentativa()
         fase_02 = int(input("[ 1 ] Você desiste da missão e se junta ao seus antigos companheiros alienígenas.\n[ 2 ] Você usa sua arma biologica para abrir caminho até a base.\n"))
-
             # voce reinicia o jogo
         if fase_02 == 2:
             quebra_linha()
@@ -172,6 +183,7 @@ def selecao_personagem():
         fase_03 = int(input("[ 1 ] Você se teletransporta para dentro da base e resgata todos sobreviventes.\n[ 2 ] Você tenta encontrar uma entrada nos fundos.\n"))
         if fase_03 == 1:
             quebra_linha()
+            msg_vitoria()            
             print("SUCESSO na missão, voltamos para 'Esquadra Estelar',\nPizza pra todo mundo!!\nA história não acaba aqui e nem agora...")
             nova_tentativa()
         else:
@@ -179,13 +191,11 @@ def selecao_personagem():
             print("Péssima escolha!! Perdeu tempo e foi encontrado!!!\nMissão foi um fracasso!!!")
             general_ougar()
             nova_tentativa()
-
-             #voce reinicia o jogo
+            #voce reinicia o jogo
 
     while (jogador == 3):
 
         if jogador == 3:
-            quebra_linha()
             print("Estamos a caminho da ""Europa"" e uma nave inimiga se aproxima!!!\n")
             fase_01 = int(input("[ 1 ] Você lança um ataque com misseis nucleares.\n[ 2 ] Você ativa campo de camuflagem e espera eles sairem do alcance.\n"))
         if fase_01 == 1:
@@ -214,6 +224,7 @@ def selecao_personagem():
             # volta inicio do jogo
         if fase_03 == 1:
             quebra_linha()
+            msg_vitoria()
             print("SUCESSO na missão, voltamos para 'Esquadra Estelar',\nPizza pra todo mundo!!\nA história não acaba aqui e nem agora...")
             nova_tentativa()
             #decide se joga novamente apos vencer.

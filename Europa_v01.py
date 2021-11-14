@@ -42,6 +42,10 @@ def selecao_personagem():
     
     
     if jogador == 1:
+        with open("madre.txt", "r", encoding = "utf-8") as arquivo:
+        madre = arquivo.read()
+        print(madre)
+        
         quebra_linha()
         print("Madre , 34 anos, natural de Uberlandia/MG, pscicóloga militar(NASA) com poderes\nde telecinese.\n")
         quebra_linha()

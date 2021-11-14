@@ -1,8 +1,8 @@
 ﻿=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-***** EUROPA *****
+						***** EUROPA *****
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-	O ano é 2099 d.C.
+						O ano é 2099 d.C.
 
 	A falta de consciência humana levou a escassez de água potável
 em nosso planeta, com isso também veio a falta de alimento, 
@@ -35,9 +35,9 @@ três voluntários se destacam por suas habilidades e comprometimento:
 	#Madre , 34 anos, natural de Uberlândia/MG, psicóloga militar(NASA) 
 com poderes de telecinese;
 	#Marfão, alienígena(idade não definida), Zotax(refugiado), 
-biólogo/geneticista com poderes de teletransporte.
+biólogo/geneticista com poderes de teletransporte;
 	#Suca, 45 anos, natural de Berlim/Alemanha, piloto/navegador 
-experiência em combate, habilidade com armas;
+experiência em combate, habilidade com armas.
 
 Objetivo da missão:
 	resgatar os sobreviventes;

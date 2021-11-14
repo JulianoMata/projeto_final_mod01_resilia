@@ -10,9 +10,7 @@ def general_ougar():
         ougar = arquivo.read()
     
         print(ougar)
-    
-        #general_ougar()
-#     #mostra imagem alienígena quando perde.
+        #mostra imagem alienígena(General Ougar) quando perde.
                               
 def quebra_linha():
     print('-=' * 42)

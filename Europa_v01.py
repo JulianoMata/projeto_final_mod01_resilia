@@ -1,3 +1,6 @@
+import os
+#limpeza do terminal
+
 with open("introducaoEuropa.txt", "r", encoding = "utf-8") as arquivo:
     introducaoEuropa = arquivo.read()
     
@@ -15,9 +18,10 @@ def general_ougar():
 def msg_vitoria():  
     with open("vencedor.txt", "r", encoding = "utf-8") as arquivo:
         vencedor = arquivo.read()
-    
+        quebra_linha()
         print(vencedor)
         #mensagem de vitoria
+        quebra_linha()
                               
 def quebra_linha():
     print('-=' * 42)
@@ -26,12 +30,13 @@ def nova_tentativa():
     print("Voltar ao jogo?")   
     nova_tentativa = int(input("[ 1 ] Sim [ 2 ] Não\n"))
     if  nova_tentativa == 1:
+        os.system("cls or clear") #limpeza do terminal
         selecao_personagem()
     else:
         print("Fica para uma próxima então!!!")
         exit()
 
-def selecao_personagem():
+def selecao_jogador():
     quebra_linha()
     print(("==-" * 12) + "MISSÃO EUROPA" + ("-==" * 12))
     
@@ -120,7 +125,7 @@ def selecao_personagem():
         if fase_02 == 1:
             quebra_linha()
             print("Você é incrível, mas ainda não acabou!")
-            print("Tivemos algumas baixas, acontece!! Missao está difícil mas estamos de fora da base. Precisamos entrar.\n")
+            print("Tivemos algumas baixas, acontece!! Missao está difícil mas estamos de fora da base.\n Precisamos entrar.\n")
             quebra_linha()
             
         
@@ -136,6 +141,7 @@ def selecao_personagem():
         if fase_03 == 1:
             quebra_linha()
             msg_vitoria()
+            quebra_linha()
             print("SUCESSO na missão, voltamos para 'Esquadra Estelar',\nPizza pra todo mundo!!\nA história não acaba aqui e nem agora...")
             quebra_linha()
             nova_tentativa()
@@ -151,8 +157,7 @@ def selecao_personagem():
             
     while (jogador == 2):
 
-        if jogador == 2:
-            quebra_linha()
+        if jogador == 2:            
             print("Estamos a caminho da ""Europa"" e uma nave inimiga se aproxima!!!\n")
             quebra_linha()
         fase_01 = int(input("[ 1 ] Você se teletransporta para a nave inimiga com uma equipe e os surpreende.\n[ 2 ] Você vai sozinho. Sempre foi muito corajoso!\n"))
@@ -161,7 +166,7 @@ def selecao_personagem():
             quebra_linha()
             print("Discreto e inteligente, isso mesmo!!!")
             print("Chegamos sãos e salvos a europa graças ao ataque bem sucedido \nmas os alienigenas ja sabem de nossa presença.\n")
-            
+            quebra_linha()
         else:
             quebra_linha()
             print("Aí não!! DEU RUIM!!!")
@@ -173,7 +178,7 @@ def selecao_personagem():
             quebra_linha()
             print("Você é incrível, mas ainda não acabou!")
             print("Tivemos algumas baixas, acontece!! Missão está difícil mas estamos de fora da base. Precisamos entrar.\n")
-            
+            quebra_linha()
         else:
             quebra_linha()
             print("Aí não!! Eles são impiedosos com traidores!!!")
@@ -183,7 +188,8 @@ def selecao_personagem():
         fase_03 = int(input("[ 1 ] Você se teletransporta para dentro da base e resgata todos sobreviventes.\n[ 2 ] Você tenta encontrar uma entrada nos fundos.\n"))
         if fase_03 == 1:
             quebra_linha()
-            msg_vitoria()            
+            msg_vitoria()
+            quebra_linha()            
             print("SUCESSO na missão, voltamos para 'Esquadra Estelar',\nPizza pra todo mundo!!\nA história não acaba aqui e nem agora...")
             nova_tentativa()
         else:
@@ -225,6 +231,7 @@ def selecao_personagem():
         if fase_03 == 1:
             quebra_linha()
             msg_vitoria()
+            quebra_linha()
             print("SUCESSO na missão, voltamos para 'Esquadra Estelar',\nPizza pra todo mundo!!\nA história não acaba aqui e nem agora...")
             nova_tentativa()
             #decide se joga novamente apos vencer.
@@ -236,6 +243,6 @@ def selecao_personagem():
 
             # Volta ao inicio do jogo
 
-selecao_personagem()
+selecao_jogador()
 #se não chama a função o jogo não roda.
       

@@ -36,7 +36,7 @@ def nova_tentativa():
         print("Fica para uma próxima então!!!")
         exit()
 
-def selecao_jogador():
+def selecao_personagem():
     quebra_linha()
     print(("==-" * 12) + "MISSÃO EUROPA" + ("-==" * 12))
     
@@ -243,6 +243,6 @@ def selecao_jogador():
 
             # Volta ao inicio do jogo
 
-selecao_jogador()
+selecao_personagem()
 #se não chama a função o jogo não roda.
       

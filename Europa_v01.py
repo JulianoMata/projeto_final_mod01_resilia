@@ -31,12 +31,12 @@ def nova_tentativa():
     nova_tentativa = int(input("[ 1 ] Sim [ 2 ] Não\n"))
     if  nova_tentativa == 1:
         os.system("cls or clear") #limpeza do terminal
-        selecao_personagem()
+        selecao_jogador()
     else:
         print("Fica para uma próxima então!!!")
         exit()
 
-def selecao_personagem():
+def selecao_jogador():
     quebra_linha()
     print(("==-" * 12) + "MISSÃO EUROPA" + ("-==" * 12))
     
@@ -79,7 +79,7 @@ def selecao_personagem():
         #definição jogador 03
     else:
         print("*** Escolha inválida ***\nEscolha [ 1 ] [ 2 ] ou [ 3 ]")
-        selecao_personagem()
+        selecao_jogador()
         #retornar ao inicio do jogo.
     
     print("Confirma escolha ou trocar? ")  
@@ -243,6 +243,6 @@ def selecao_personagem():
 
             # Volta ao inicio do jogo
 
-selecao_personagem()
+selecao_jogador()
 #se não chama a função o jogo não roda.
       

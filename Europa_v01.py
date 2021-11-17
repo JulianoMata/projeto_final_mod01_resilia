@@ -51,8 +51,6 @@ def selecao_jogador():
     jogador = int(input("[ 1 ] MADRE  [ 2 ] MARFÃO  [ 3 ] SUCA \n"))
     quebra_linha()
     
-    
-    
     if jogador == 1:
         with open("madre.txt", "r", encoding = "utf-8") as arquivo:
             madre = arquivo.read() #le arquivo txt com imagem ascii 
@@ -96,7 +94,6 @@ def selecao_jogador():
         
     #confirma a escolha do jogador               
     
-
     while (jogador == 1):
 
         if  jogador == 1:

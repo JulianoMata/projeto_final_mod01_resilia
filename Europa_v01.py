@@ -38,8 +38,10 @@ def nova_tentativa():
 
 def selecao_jogador():
     quebra_linha()
-    print(("==-" * 12) + "MISSÃO EUROPA" + ("-==" * 12))
-    
+    print(("==-" * 12) + "MISSÃO" + ("-==" * 12))
+    with open("titulo.txt", "r", encoding = "utf-8") as arquivo:
+        titulo = arquivo.read()
+        print(titulo)
     quebra_linha()
     print("Agora é com você...\n")
     print("O tempo não está ajudando...\n")

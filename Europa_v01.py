@@ -26,11 +26,12 @@ def msg_vitoria():
 def quebra_linha():
     print('-=' * 42)
 
-def nova_tentativa():    
+def nova_tentativa():
+    os.system("cls or clear") #limpeza do terminal    
     print("Voltar ao jogo?")   
     nova_tentativa = int(input("[ 1 ] Sim [ 2 ] Não\n"))
     if  nova_tentativa == 1:
-        os.system("cls or clear") #limpeza do terminal
+        
         selecao_jogador()
     else:
         print("Fica para uma próxima então!!!")

@@ -245,4 +245,3 @@ def selecao_jogador():
 
 selecao_jogador()
 #se não chama a função o jogo não roda.
-      

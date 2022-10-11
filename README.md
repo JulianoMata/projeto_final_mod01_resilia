@@ -1,4 +1,4 @@
-# projeto_final_mod01
+# Projeto final MOD 01
 Jogo textual em python3 com interação entre jogador e jogo através do prompt.
 Possível escolher entre três jogadores.
 Cada jogador passará por três fases.

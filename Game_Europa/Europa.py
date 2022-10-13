@@ -42,12 +42,12 @@ def nova_tentativa():
 
 
 def quebra_linha():
-    linha = ("-=" * 50)
-    print(f"\033[33m{linha.center(100)}\033[m")
+    linha = ("-=" * 36)
+    print(f"\033[33m{linha.center(70)}\033[m")
     
 def titulo_jogo():
     titulo = (" MISSÃO ")
-    print(f"\033[32m{titulo.center(100, '*')}\033[m")
+    print(f"\033[32m{titulo.center(72, '*')}\033[m")
     quebra_linha()
     with open("Game_Europa\Arquivos_Imagem_ASCII\europa_titulo.txt", "r", encoding = "utf-8") as arquivo:
         titulo = arquivo.read()

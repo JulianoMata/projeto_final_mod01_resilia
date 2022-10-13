@@ -1,27 +1,23 @@
 # import (GAME-EUROPA.txt) - como importar txt???
 
 import os
-#limpeza do terminal
+import time
 
-with open("Game_Europa\Arquivos_Imagem_ASCII\introducao_europa.txt", "r", encoding = "utf-8") as arquivo:
-    introducaoEuropa = arquivo.read()
-    
-    print(f"\033[1;49;30m{introducaoEuropa}\033[m\n")
-
-           #abrir arquivo de introdução "Europa", conta a história. 
+#limpeza do terminal 
            
 def general_ougar():  
     with open("Game_Europa\Arquivos_Imagem_ASCII\ougar_imagem.txt", "r", encoding = "utf-8") as arquivo:
         ougar = arquivo.read()
-    
-        print(ougar)
+        quebra_linha()
+        print(f"\033[1;49;31m{ougar}\033[m\n")
+        quebra_linha()
         #mostra imagem alienígena(General Ougar) quando perde.
         
 def msg_vitoria():  
     with open("Game_Europa\Arquivos_Imagem_ASCII\msg_vencedor.txt", "r", encoding = "utf-8") as arquivo:
         vencedor = arquivo.read()
         quebra_linha()
-        print(vencedor)
+        print(f"\033[1;49;32m\n{vencedor}\033[m\n")
         #mensagem de vitoria
         quebra_linha()
         
@@ -30,6 +26,7 @@ def opcao_invalida():
         print(f"\033[1;49;31mFavor escolher opção válida.\033[m\n")
                               
 def nova_tentativa():
+    time.sleep(3.5) # tempo de espera para limpeza
     os.system("cls or clear") #limpeza do terminal    
     print(f"\033[1;49;31mVoltar ao jogo?\033[m\n")   
     nova_tentativa = int(input("[ 1 ] Sim [ 2 ] Não\n"))
@@ -42,21 +39,29 @@ def nova_tentativa():
 
 
 def quebra_linha():
-    linha = ("-=" * 36)
-    print(f"\033[33m{linha.center(70)}\033[m")
+    linha = ("-=" * 50)
+    print(f"\033[33m{linha.center(100)}\033[m")
+    
+with open("Game_Europa\Arquivos_Imagem_ASCII\introducao_europa.txt", "r", encoding = "utf-8") as arquivo:
+    introducaoEuropa = arquivo.read()
+    quebra_linha()
+    print(f"\033[1;49;30m{introducaoEuropa}\033[m\n")
+
+           #abrir arquivo de introdução "Europa", conta a história.
     
 def titulo_jogo():
+    time.sleep(5.5)
     titulo = (" MISSÃO ")
-    print(f"\033[32m{titulo.center(72, '*')}\033[m")
+    print(f"\033[32m{titulo.center(100, '*')}\033[m")
     quebra_linha()
     with open("Game_Europa\Arquivos_Imagem_ASCII\europa_titulo.txt", "r", encoding = "utf-8") as arquivo:
         titulo = arquivo.read()
-        print(f"\033[1;49;33m{titulo}\033[m")
+        print(f"\033[1;49;33m{titulo}\033[m\n")
         quebra_linha()
-    print("Agora é com você...\n")
-    print("O tempo não está ajudando...\n")
-    print("Estamos em uma viagem pelo universo...\n")    
-    print("Antes vc tem uma missão...\n")
+        print(f"        \033[1;49;34mAgora é com você...\n")
+        print(f"        \033[1;49;34mO tempo não está ajudando...\033[m\n")
+        print(f"        \033[1;49;34mEstamos em uma viagem pelo universo...\033[m\n")    
+        print(f"        \033[1;49;34mAntes vc tem uma missão...\033[m\n")
    
 quebra_linha()
 titulo_jogo()
@@ -69,7 +74,7 @@ def selecao_jogador():
     if jogador == 1:
         with open("Game_Europa\Arquivos_Imagem_ASCII\madre_imagem.txt", "r", encoding = "utf-8") as arquivo:
             madre_imagem = arquivo.read() #le arquivo txt com imagem ascii 
-            print(madre_imagem) #mostra imagem
+            print(f"\033[35m{madre_imagem}\033[m\n") #mostra imagem
             quebra_linha()
             print(f"\033[1;49;30mMadre , 34 anos, natural de Uberlandia/MG, pscicóloga militar(NASA) com poderes de telecinese.\nReligiosa de extrema empatia, conhecida por agir com emoção em situações extremas.\033[m\n")
             quebra_linha()
@@ -78,7 +83,7 @@ def selecao_jogador():
     elif jogador == 2:
         with open("Game_Europa\Arquivos_Imagem_ASCII\marfao_imagem.txt", "r", encoding = "utf-8") as arquivo:
             marfao_imagem = arquivo.read()
-            print(marfao_imagem)
+            print(f"\033[32m{marfao_imagem}\033[31m\n")
             quebra_linha()
             print(f"\033[1;49;30mMarfão, alienígena(idade não definida), Zotax(refugiado), \nbiólogo/geneticista com poderes de teletransporte.\nChegou ao Planeta Terra fugindo da crueldade de seu líder(Hougar).\033[m\n")
             quebra_linha()
@@ -87,7 +92,7 @@ def selecao_jogador():
     elif jogador == 3:
         with open("Game_Europa\Arquivos_Imagem_ASCII\suca_imagem.txt", "r", encoding = "utf-8") as arquivo:
             suca_imagem = arquivo.read()
-            print(suca_imagem)
+            print(f"\033[31m{suca_imagem}\033[m\n")
             quebra_linha()
             print(f"\033[1;49;30mSuca, 45 anos, natural de Berlim/Alemanha, piloto/navegador experiência em combate, habilidade com armas.\nLegítimo soldado e nunca deixa ninguém para trás.\033[m\n")
             quebra_linha()
@@ -131,12 +136,16 @@ def selecao_jogador():
             
         elif fase_01 == 2:
             quebra_linha()
+            general_ougar()
+            quebra_linha()
             print(f"\033[1;49;31mFugir  ou se esconder nunca foi uma escolha!!!\033[m\n")
             print(f"\033[1;49;34mVamos tentar novamente?!\033[m\n")
             quebra_linha()
             nova_tentativa()
             
         elif fase_01 == 3:
+            quebra_linha()
+            general_ougar()
             quebra_linha()
             print(f"\033[1;49;31mTá tão apavorado(a)!!! Resolve nada isso!!!\033[m\n")
             print(f"\033[1;49;34mVamos tentar novamente?!\033[m\n")
@@ -156,8 +165,11 @@ def selecao_jogador():
             print(f"\033[1;49;30mTivemos algumas baixas, acontece!! \nMissao está difícil mas estamos de fora da base. \nPrecisamos entrar.\033[m\n")
             
         else:
-            print(f"\033[1;49;31mTá de brincadeira, vidas em jogo e faz isso?!\033[m\n")
+            quebra_linha()
             general_ougar()
+            quebra_linha()
+            print(f"\033[1;49;31mTá de brincadeira, vidas em jogo e faz isso?!\033[m\n")
+            quebra_linha()
             nova_tentativa()
 
         fase_03 = int(input("[ 1 ] Você arranca a porta com toda fúria e resgata nossos amigos.\n[ 2 ] Você aperta a campainha e espera.\n"))
@@ -168,11 +180,12 @@ def selecao_jogador():
             quebra_linha()
             print(f"\033[1;49;32mSUCESSO na missao, vamos voltar p casa!!!\nPizza pra todo mundo!!\n")
             quebra_linha()
-            exit()
+            nova_tentativa()
         else:
             quebra_linha()
-            print(f"\033[1;49;31mComo é lesado(a)!!! Achou que daria certo?\033[m\n")
             general_ougar()
+            quebra_linha()
+            print(f"\033[1;49;31mComo é lesado(a)!!! Achou que daria certo?\033[m\n")
             quebra_linha()
             nova_tentativa()
             
@@ -191,8 +204,9 @@ def selecao_jogador():
             
         else:
             quebra_linha()
-            print(f"\033[1;49;31mVocê é louco!! Deu ruim!!!\033[m\n")
             general_ougar()
+            quebra_linha()
+            print(f"\033[1;49;31mVocê é louco!! Deu ruim!!!\033[m\n")
             quebra_linha()
             nova_tentativa()
             
@@ -205,8 +219,9 @@ def selecao_jogador():
             
         else:
             quebra_linha()
-            print(f"\033[1;49;31mAí não!! Eles são impiedosos com traidores!!!\033[m\n")
             general_ougar()
+            quebra_linha()
+            print(f"\033[1;49;31mAí não!! Eles são impiedosos com traidores!!!\033[m\n")
             quebra_linha()
             nova_tentativa()
         
@@ -217,11 +232,12 @@ def selecao_jogador():
             msg_vitoria()
             quebra_linha()
             print(f"\033[1;49;32mSUCESSO na missao, vamos voltar p casa,\nHj tem lasanha e coca-cola pra todo mundo!!\033[m\n")
-            exit()
+            nova_tentativa()
         else:
             quebra_linha()
-            print(f"\033[1;49;31mPéssima escolha!!! Perdeu tempo e foi encontrado!!!\nMissão foi um fracasso!!!\033[m\n")
             general_ougar()
+            quebra_linha()
+            print(f"\033[1;49;31mPéssima escolha!!! Perdeu tempo e foi encontrado!!!\nMissão foi um fracasso!!!\033[m\n")
             quebra_linha()
             nova_tentativa()
            
@@ -239,8 +255,9 @@ def selecao_jogador():
             
         else:
             quebra_linha()
-            print(f"\033[1;49;31mIsso atrasou a missão, eles estão em patrulha e não vão se distanciar tão cedo!!!\033[m\n")
             general_ougar()
+            quebra_linha()
+            print(f"\033[1;49;31mIsso atrasou a missão, eles estão em patrulha e não vão se distanciar tão cedo!!!\033[m\n")
             quebra_linha()
             nova_tentativa() 
             
@@ -253,8 +270,9 @@ def selecao_jogador():
             
         else:
             quebra_linha()
-            print(f"\033[1;49;31mPoxa, não mano!!! \nSão mais fortes soldado(a)!!!\033[m\n")
             general_ougar()
+            quebra_linha()
+            print(f"\033[1;49;31mPoxa, não mano!!! \nSão mais fortes soldado(a)!!!\033[m\n")
             nova_tentativa()
         
         fase_03 = int(input("[ 1 ] Você usa seu laser em potência reduzida e abre a porta lateral.\n[ 2 ] Você explode a entrada principal com uma granada de nitrogênio.\n"))
@@ -264,12 +282,13 @@ def selecao_jogador():
             msg_vitoria()
             quebra_linha()
             print(f"\033[1;49;32mSUCESSO!!! Voltar para 'Esquadra Espacial',\nVamos em busca de um novo lar!!!\033[m\n")
-            exit()   
+            nova_tentativa()  
             
         else:
             quebra_linha()
-            print(f"\033[1;49;31mSó pode ter bebido!!! \nExplodiu foi tudo!!!\033[m\n")
             general_ougar()
+            quebra_linha()
+            print(f"\033[1;49;31mSó pode ter bebido!!! \nExplodiu foi tudo!!!\033[m\n")
             nova_tentativa()
             
 
